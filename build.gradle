@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.3.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'org.springframework.boot' version '2.7.2'
+    id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
 }
 
-group = 'org.gitorko'
+group = 'com.demo'
 version = '1.0.0'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -16,14 +16,14 @@ configurations {
 
 repositories {
     mavenCentral()
-    maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
+    maven { url "https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
 
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'net.sf.jasperreports:jasperreports:6.20.0'
+    implementation 'com.lowagie:itext:2.1.7'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compile 'net.sf.jasperreports:jasperreports:6.14.0'
-    compile 'com.lowagie:itext:2.1.7'
 }

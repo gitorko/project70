@@ -1,4 +1,4 @@
-package org.gitorko.project70;
+package com.demo.project70;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,19 +23,19 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
     static final String fileName = "src/main/resources/EmployeeReports.jrxml";
     static final String outFile = "EmployeeReports.pdf";
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        List<Employee> employeeList = new ArrayList<Employee>();
-        Map<String, Object> parameter = new HashMap<String, Object>();
+        List<Employee> employeeList = new ArrayList<>();
+        Map<String, Object> parameter = new HashMap<>();
 
         employeeList.add(new Employee(1, "Jack Ryan", 100.0));
         employeeList.add(new Employee(2, "Cathy Mueller", 130.0));
